@@ -15,6 +15,15 @@ Cloudflare Workers 上で、esa.io の OAuth 2.0 を最小実用の OpenID Conne
 
 `OIDC_JWT_PRIVATE_KEY` は JSON JWK か PKCS#8 PEM を受け付けます。
 
+生成例:
+
+```bash
+pnpm generate:oidc-jwt-key
+pnpm generate:oidc-jwt-key -- --modulus-length 3072
+```
+
+標準出力に出た 1 行 JSON を、そのまま `OIDC_JWT_PRIVATE_KEY` に設定してください。
+
 ## Endpoints
 
 - `GET /.well-known/openid-configuration`
